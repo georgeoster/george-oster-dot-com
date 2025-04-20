@@ -3,7 +3,7 @@ import hands from './assets/hands.jpg';
 
 export default function IntroCard() {
   const container = `
-    bg-gradient-to-tr from-stone-800 from-10% via-stone-500 via-90% to-stone-800
+    bg-gradient-to-tr from-stone-900 from-20% via-stone-500 via-60% to-stone-900
     relative
     flex flex-col justify-end
     h-60 
@@ -11,30 +11,33 @@ export default function IntroCard() {
     md:h-90 
     lg:h-110 
     xl:h-130 
-    2xl:h-140`
+    2xl:h-140
+  `
     
   const image = `
     w-full h-full 
     object-cover 
     absolute 
-    mix-blend-overlay`
+    mix-blend-overlay
+  `
 
   const title = `
-    text-zinc-300 text-5xl font-sans
+    text-neutral-300 text-5xl font-sans
     pl-4 mb-1 
     md:text-6xl 
-    xl:text-7xl`
+    xl:text-7xl
+  `
 
   const subTitle = `
-    text-zinc-300 text-1xl font-sans
+    text-neutral-300 text-1xl font-sans
     pl-4 mb-4 
     md:text-2xl 
-    xl:text-3xl`
+    xl:text-3xl
+  `
 
     return (
-        <div className={container}>
+      <div className={container}>
         <img src={hands} className={image} />
-
         <div className={title}>Hi, I'm George</div>
         <div className={subTitle}>Full Stack Developer | Dog Lover | BBQ Eater</div>
       </div>
