@@ -10,12 +10,14 @@ export default function TechStackItem({title, description}) {
 
   const titleClass = `
     text-neutral-950 
-    text-xl font-bold 
+    font-bold 
+    text-md md:text-lg lg:text-xl
     mb-2
   `
 
   const descriptionClass = `
-    text-neutral-600 text-sm
+    text-neutral-600 
+    text-xs md:text-sm lg:text-md
   `
 
   return (
