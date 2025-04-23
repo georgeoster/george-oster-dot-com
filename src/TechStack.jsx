@@ -5,12 +5,14 @@ import TechStackItem from './TechStackItem'
 export default function TechStack() {
 
   const title = `
-    text-center text-4xl text-neutral-800
-    mt-6 `
+    text-center text-neutral-800
+
+    text-2xl md:text-3xl lg:text-4xl
+    mt-4 `
 
   const container = `
     flex flex-col lg:flex-row 
-    mt-4 px-4 pt-4 
+    mb-3 px-4 pt-4 
     lg:items-stretch lg:max-w-7xl 
     mx-auto
   `
@@ -29,7 +31,7 @@ export default function TechStack() {
   const techStackItemsContainer = `
     pl-2 mx-auto 
     w-full lg:w-1/2 
-    max-w-2xl 
+    max-w-4xl 
     grid-cols-1
     sm:grid sm:grid-cols-2 sm:gap-4 
     lg:grid-cols-1

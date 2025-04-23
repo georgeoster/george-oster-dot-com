@@ -22,17 +22,15 @@ export default function IntroCard() {
   `
 
   const title = `
-    text-neutral-300 text-5xl font-sans
-    pl-4 mb-1 
-    md:text-6xl 
-    xl:text-7xl
+    text-neutral-300 font-sans
+    text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl
+    pl-4  
   `
 
   const subTitle = `
-    text-neutral-300 text-1xl font-sans
+    text-neutral-300 font-sans
+    text-sm sm:text-md md:text-lg lg:text-xl xl:text-2xl
     pl-4 mb-4 
-    md:text-2xl 
-    xl:text-3xl
   `
 
     return (
