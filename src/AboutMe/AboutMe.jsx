@@ -1,10 +1,8 @@
 import AboutMeItem from "./AboutMeItem";
-import charcoal from '../assets/charcoal.jpg';
-import meatTower from '../assets/meatTower.jpg';
-import brindleSleep from '../assets/brindleSleep.jpg';
-import jojoSmile from '../assets/jojoSmile.jpg';
+import { charcoal, brindle, meatTower, jojoSmile } from "./aboutMeCopy";
 
 const AboutMe = () => {
+  const items = [charcoal, brindle, meatTower, jojoSmile];
   return (
     <section className="bg-neutral-800 pt-6 mt-6">
       <h2
@@ -26,37 +24,15 @@ const AboutMe = () => {
           md:grid-cols-1 lg:grid-cols-2
         "
       >
-        <div className="order-1 lg:order-1">
-          <AboutMeItem
-            image={charcoal}
-            title="Charcoal Only"
-            description="Electric is convenient and pellets are reliable, but flavor favors the brave!"
-          />
-        </div>
-
-        <div className="order-2 lg:order-2">
-          <AboutMeItem
-            image={brindleSleep}
-            title="Life of a Dog"
-            description="Brindle spends most of her time recharging for her next walk."
-          />
-        </div>
-
-        <div className="order-3 sm:order-4 md:order-3 lg:order-4">
-          <AboutMeItem
-            image={meatTower}
-            title="Meat Tower"
-            description="No spit to rotate your shawarma? No problem! Just rotate the fire instead."
-          />
-        </div>
-
-        <div className="order-4 sm:order-3 md:order-4 lg:order-3">
-          <AboutMeItem
-            image={jojoSmile}
-            title="The Smiles of JoJo"
-            description="I have never known a happier dog."
-          />
-        </div>
+        {items.map((item) => 
+          <div className={item.wrapperClass} key={item.title}>
+            <AboutMeItem
+              image={item.image}
+              title={item.title}
+              tagline={item.tagline}
+            />
+          </div>
+          )}
       </div>
     </section>
   );

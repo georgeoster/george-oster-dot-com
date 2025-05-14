@@ -1,4 +1,4 @@
-const AboutMeItem = ({ image, title, description }) => {
+const AboutMeItem = ({ image, title, tagline }) => {
   return (
     <article
       className="
@@ -18,7 +18,7 @@ const AboutMeItem = ({ image, title, description }) => {
           {title}
         </h3>
         <p className="text-neutral-500 text-xs md:text-sm lg:text-md mt-2 transition-colors duration-300">
-          {description}
+          {tagline}
         </p>
       </div>
     </article>
