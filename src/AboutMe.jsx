@@ -6,7 +6,12 @@ import jojoSmile from './assets/jojoSmile.jpg'
 
 export default function AboutMe() {
   return (
-    <div className="bg-neutral-800">
+    <div className="bg-neutral-800 pt-6 mt-6">
+      <p className="relative text-center text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-300 mb-4 after:content-[''] after:block after:h-1 after:w-16 after:mx-auto after:mt-2 after:bg-sky-800 after:rounded-full">
+        Life Outside the Laptop
+      </p>
+      {/* Off the Clock */}
+
       <div className="grid grid-cols-1 gap-6 
         md:grid-cols-1 md:max-w-4xl
         lg:grid-cols-2
