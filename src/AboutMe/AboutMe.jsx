@@ -4,7 +4,7 @@ import { charcoal, brindle, meatTower, jojoSmile } from "./aboutMeCopy";
 const AboutMe = () => {
   const items = [charcoal, brindle, meatTower, jojoSmile];
   return (
-    <section className="bg-neutral-800 pt-6 mt-6">
+    <section className="bg-neutral-800 pt-6">
       <h2
         className="
           relative text-center text-2xl md:text-3xl lg:text-4xl 
