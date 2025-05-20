@@ -1,6 +1,6 @@
 import { useState } from "react";
 import desk from "../assets/blurcode.jpg";
-import SectionContainer from "../SectionContainer";
+import SectionContainer from "../Shared/SectionContainer";
 import TechStackItem from "./TechStackItem";
 import TechStackModal from "./TechStackModal";
 import { frontEnd, backEnd, dataBase, testing } from "./techStackCopy";

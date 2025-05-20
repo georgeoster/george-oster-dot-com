@@ -1,67 +1,33 @@
-// PersonalProjectsModal.jsx (modal with full writeup)
-import { X } from 'lucide-react';
-import { useEffect, useRef } from 'react';
-import PersonalProjectsModalButtons from './PersonalProjectsModalButtons';
+import ModalWrapper from "../Shared/ModalWrapper";
 
-const PersonalProjectsModal = ({ project, onClose }) => {
-  const modalRef = useRef(null);
+const PersonalProjectsModal = ({ isOpen, onClose, project, primaryButtonHandler, secondaryButtonHandler }) => {
+  if (!isOpen || !project) return null;
 
-  useEffect(() => {
-    if (modalRef.current) {
-      requestAnimationFrame(() => {
-        modalRef.current.classList.remove('opacity-0', 'translate-y-5');
-        modalRef.current.classList.add('opacity-100', 'translate-y-0');
-      });
-    }
-  }, [project]);
-
-  const handleClose = () => {
-    if (modalRef.current) {
-      modalRef.current.classList.remove('opacity-100', 'translate-y-0');
-      modalRef.current.classList.add('opacity-0', 'translate-y-5');
-      setTimeout(() => onClose(), 500);
-    }
-  };
-
-  if (!project) return null;
+  const footer = (
+    <>
+      <button
+        onClick={primaryButtonHandler}
+        className="px-5 py-2 text-sm sm:text-base font-medium rounded-2xl shadow-md bg-cyan-800 text-white hover:bg-cyan-700 transition"
+      >
+        View Site
+      </button>
+      <button
+        onClick={secondaryButtonHandler}
+        className="px-5 py-2 text-sm sm:text-base font-medium rounded-2xl border border-cyan-800 text-cyan-800 hover:bg-cyan-100 transition"
+      >
+        GitHub Repo
+      </button>
+    </>
+  );
 
   return (
-    <div
-      role="dialog"
-      aria-modal="true"
-      className="bg-black/80 fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
-    >
-      <div
-        ref={modalRef}
-        className="
-          relative bg-white text-neutral-800 w-full max-w-sm sm:max-w-3xl
-          rounded-2xl shadow-xl p-6 sm:p-8
-          transition-all duration-500 ease-out
-          opacity-0 translate-y-5
-        "
-      >
-        <button
-          type="button"
-          aria-label="Close modal"
-          onClick={handleClose}
-          className="absolute top-4 right-4 text-neutral-500 hover:text-neutral-800"
-        >
-          <X size={24} />
-        </button>
-
-        <div className="text-left">
-          <h2 className="text-3xl sm:text-4xl font-bold text-cyan-700 mb-4">
-            {project.name}
-          </h2>
-          {project.description.split('\n').map((p, idx) => (
-            <p key={idx} className="text-sm md:text-base text-neutral-700 mb-3 last:mb-0">
-              {p}
-            </p>
-          ))}
-          <PersonalProjectsModalButtons project={project} />
-        </div>
+    <ModalWrapper isOpen={isOpen} onClose={onClose} title={project.name} centered footer={footer}>
+      <div className="mt-4 text-sm sm:text-base sm:mt-6 text-left text-neutral-700">
+        {project.description.split('\n').map((p, idx) => (
+          <p key={idx} className="mb-3 last:mb-0">{p}</p>
+        ))}
       </div>
-    </div>
+    </ModalWrapper>
   );
 };
 
