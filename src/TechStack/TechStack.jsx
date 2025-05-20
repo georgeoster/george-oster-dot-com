@@ -17,7 +17,7 @@ const TechStack = () => {
   const items = [frontEnd, backEnd, dataBase, testing];
 
   return (
-    <section className="pb-12">
+    <section className="py-4 md:py-6 lg:py-8">
       <SectionContainer>
         <TechStackModal
           isOpen={showModal}
@@ -25,11 +25,11 @@ const TechStack = () => {
           mode={modalMode}
         />
 
-        <h2 className="relative text-center text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-800 mt-8 mb-8 after:content-[''] after:block after:h-1 after:w-16 after:mx-auto after:mt-2 after:bg-cyan-800 after:rounded-full">
+        <h2 className="relative text-center text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-800 mb-8 after:content-[''] after:block after:h-1 after:w-16 after:mx-auto after:mt-2 after:bg-cyan-800 after:rounded-full">
           Tech Stack
         </h2>
 
-        <div className="flex flex-col lg:flex-row gap-6 items-stretch">
+        <div className="flex flex-col lg:flex-row gap-6 items-stretch md:pt-1 lg:pt-2">
           <div className="hidden lg:block w-1/2">
             <img
               src={desk}
@@ -44,7 +44,6 @@ const TechStack = () => {
             ))}
           </div>
         </div>
-
       </SectionContainer>
     </section>
   );
