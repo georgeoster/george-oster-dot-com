@@ -1,15 +1,27 @@
 import { useState } from "react";
 import { projects } from "./personalProjectsCopy";
-import SectionContainer from "../SectionContainer";
+import SectionContainer from "../Shared/SectionContainer";
 import PersonalProjectsItem from "./PersonalProjectsItem";
 import PersonalProjectsModal from "./PersonalProjectsModal";
 
 const PersonalProjects = () => {
+  const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState(null);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setShowModal(true);
+  };
 
   return (
     <section id="personal-projects" className="bg-neutral-800 py-4 md:py-6 lg:py-8 text-neutral-100">
       <SectionContainer>
+        <PersonalProjectsModal
+          isOpen={showModal}
+          project={selectedProject}
+          onClose={() => setShowModal(false)}
+        />
+
         <h2 className="relative text-center text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-300 mb-8 after:content-[''] after:block after:h-1 after:w-16 after:mx-auto after:mt-2 after:bg-sky-800 after:rounded-full">
           Personal Projects
         </h2>
@@ -19,17 +31,10 @@ const PersonalProjects = () => {
             <PersonalProjectsItem
               key={project.name}
               project={project}
-              onClick={setSelectedProject}
+              onClick={openModal}
             />
           ))}
         </div>
-
-        {selectedProject && (
-          <PersonalProjectsModal
-            project={selectedProject}
-            onClose={() => setSelectedProject(null)}
-          />
-        )}
       </SectionContainer>
     </section>
   );

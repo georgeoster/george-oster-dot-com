@@ -1,5 +1,5 @@
 import AboutMeItem from "./AboutMeItem";
-import SectionContainer from "../SectionContainer";
+import SectionContainer from "../Shared/SectionContainer";
 import { charcoal, brindle, meatTower, jojoSmile } from "./aboutMeCopy";
 
 const AboutMe = () => {
