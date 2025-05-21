@@ -33,35 +33,39 @@ const ModalWrapper = ({ isOpen, onClose, title, children, centered = false, foot
         ref={modalRef}
         className="
           relative bg-white text-neutral-800 w-full max-w-sm sm:max-w-3xl
-          rounded-2xl shadow-xl p-6 sm:p-8
-          transition-all duration-500 ease-out
-          opacity-0 translate-y-5
-          max-h-[90vh] overflow-y-auto
+          rounded-2xl shadow-xl transition-all duration-500 ease-out
+          opacity-0 translate-y-5 flex flex-col max-h-[90vh]
         "
       >
-        <button
-          type="button"
-          aria-label="Close modal"
-          onClick={handleClose}
-          className="absolute top-4 right-4 text-neutral-500 hover:text-neutral-800"
-        >
-          <X size={24} />
-        </button>
-
-        <div className={centered ? "text-center" : "text-left"}>
+        {/* Header */}
+        <div className="flex items-center justify-between px-6 sm:px-8 pt-6 sm:pt-8 pb-4">
           {title && (
-            <h2 className="text-3xl sm:text-4xl font-bold text-cyan-700 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-cyan-700">
               {title}
             </h2>
           )}
-          {children}
-
-          {footer && (
-            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-              {footer}
-            </div>
-          )}
+          <button
+            type="button"
+            aria-label="Close modal"
+            onClick={handleClose}
+            className="text-neutral-500 hover:text-neutral-800 hover:bg-neutral-200 rounded-full p-2 transition-colors"
+          >
+            <X size={20} />
+          </button>
         </div>
+
+
+        {/* Body */}
+        <div className={`flex-1 overflow-y-auto px-6 sm:px-8 ${centered ? "text-center" : "text-left"}`}>
+          {children}
+        </div>
+
+        {/* Footer */}
+        {footer && (
+          <div className="px-6 sm:px-8 pt-4 pb-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+            {footer}
+          </div>
+        )}
       </div>
     </div>
   );
