@@ -1,6 +1,7 @@
-const AboutMeItem = ({ image, title, tagline }) => {
+const AboutMeItem = ({ image, title, tagline, onClick }) => {
   return (
     <article
+      onClick={onClick}
       className="
         group grid grid-cols-2 gap-2 p-2 
         bg-neutral-50 rounded-3xl border border-neutral-200 

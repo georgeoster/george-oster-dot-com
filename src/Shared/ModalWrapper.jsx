@@ -27,7 +27,7 @@ const ModalWrapper = ({ isOpen, onClose, title, children, centered = false, foot
     <div
       role="dialog"
       aria-modal="true"
-      className="bg-black/80 fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6"
+      className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
     >
       <div
         ref={modalRef}
@@ -36,6 +36,7 @@ const ModalWrapper = ({ isOpen, onClose, title, children, centered = false, foot
           rounded-2xl shadow-xl p-6 sm:p-8
           transition-all duration-500 ease-out
           opacity-0 translate-y-5
+          max-h-[90vh] overflow-y-auto
         "
       >
         <button
