@@ -22,16 +22,39 @@ import meandjojo from '../assets/jojo/meandjo.jpg'
 import sillyroach from '../assets/jojo/sillyroach.jpg'
 import sleeplikeaperson from '../assets/jojo/sleeplikeaperson.jpg'
 import snuggly from '../assets/jojo/snuggly.jpg'
-import snugglyalert from '../assets/jojo/snugglyalert.jpg'
 import sonoble from '../assets/jojo/sonoble.jpg'
 import weirdsleep from '../assets/jojo/weirdsleep.jpg'
 import xmasbonejojo from '../assets/jojo/xmasbone.jpg'
+import charcoaldump from '../assets/charcoal/charcoaldump.jpg'
+import chuckcooked from '../assets/charcoal/chuckcooked.jpg'
+import chuckraw from '../assets/charcoal/chuckraw.jpg'
+import closeupcookedribsinrack from '../assets/charcoal/closeupcookedribsinrack.jpg'
+import cookedsaucedribs from '../assets/charcoal/cookedsaucedribs.jpg'
+import fajitas from '../assets/charcoal/fajitas.jpg'
+import rawsmokeyribs from '../assets/charcoal/rawsmokeyribs.jpg'
+import saucetheribs from '../assets/charcoal/saucetheribs.jpg'
+import almostdone from '../assets/meattower/almostdone.jpg'
+import finishedinside from '../assets/meattower/finishedinside.jpg'
+import rawinside from '../assets/meattower/rawinside.jpg'
+import rawstart from '../assets/meattower/rawstart.jpg'
+import sliced from '../assets/meattower/sliced.jpg'
+import snake from '../assets/meattower/snake.jpg'
 
 export const charcoal = {
   title: "Charcoal Only",
   tagline: "Electric is convenient and pellets are reliable, but flavor favors the brave!",
   image: charcoalImage,
-  wrapperClass: "order-1 lg:order-1"
+  wrapperClass: "order-1 lg:order-1",
+  photos: [
+    { image: charcoaldump, caption: 'Charcoal or Nothin!' },
+    { image: rawsmokeyribs, caption: 'I love this rib holder' },
+    { image: closeupcookedribsinrack, caption: 'caption' },
+    { image: saucetheribs, caption: 'Sauce the Ribs' },
+    { image: cookedsaucedribs, caption: 'Arguably what I am best at' },
+    { image: chuckraw, caption: 'Chuck Roast with smokey ketchup' },
+    { image: chuckcooked, caption: 'Came out pretty good' },
+    { image: fajitas, caption: 'Fun Fact: Fajitas can be smoked' },
+  ]
 };
 
 export const brindle = {
@@ -57,7 +80,15 @@ export const meatTower = {
   title: "Meat Tower",
   tagline: "No spit to rotate your shawarma? No problem! Just rotate the fire instead.",
   image: meatTowerImage,
-  wrapperClass: "order-3 lg:order-4"
+  wrapperClass: "order-3 lg:order-4",
+  photos: [
+    { image: snake, caption: 'Rotate the fire around the meat' },
+    { image: rawinside, caption: 'Season Heavily' },
+    { image: rawstart, caption: 'and so it begins' },
+    { image: almostdone, caption: 'i can taste this picture' },
+    { image: finishedinside, caption: '...i mean ...' },
+    { image: sliced, caption: 'caption' },
+  ]
 };  
 
 export const jojoSmile = {
