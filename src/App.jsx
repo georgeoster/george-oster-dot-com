@@ -5,6 +5,7 @@ import IntroCard from './IntroCard'
 import TechStack from './TechStack/TechStack'
 import AboutMe from './AboutMe/AboutMe'
 import PersonalProjects from './Projects/PersonalProjects'
+import ContactMe from './ContactMe/ContactMe'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <TechStack/>
       <PersonalProjects/>
       <AboutMe/>
+      <ContactMe/>
     </>
   )
 }
