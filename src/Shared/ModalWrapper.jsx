@@ -38,7 +38,7 @@ const ModalWrapper = ({ isOpen, onClose, title, children, centered = false, foot
         "
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 sm:px-8 pt-6 sm:pt-8 pb-4">
+        <div className="relative px-6 sm:px-8 pt-6 sm:pt-8 pb-4 text-center">
           {title && (
             <h2 className="text-3xl sm:text-4xl font-bold text-cyan-700">
               {title}
@@ -48,10 +48,11 @@ const ModalWrapper = ({ isOpen, onClose, title, children, centered = false, foot
             type="button"
             aria-label="Close modal"
             onClick={handleClose}
-            className="text-neutral-500 hover:text-neutral-800 hover:bg-neutral-200 rounded-full p-2 transition-colors"
+            className="absolute top-6 right-6 text-neutral-500 hover:text-neutral-800 hover:bg-neutral-200 rounded-full p-2 transition-colors"
           >
             <X size={20} />
           </button>
+
         </div>
 
 

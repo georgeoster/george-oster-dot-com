@@ -36,14 +36,29 @@ const PersonalProjectsModal = ({ isOpen, onClose, project }) => {
 
   return (
     <ModalWrapper isOpen={isOpen} onClose={onClose} title={project.name} centered footer={footer}>
-      <div className="mt-4 text-sm sm:text-base sm:mt-6 text-left text-neutral-700">
+      <div className="text-sm sm:text-base text-left text-neutral-700">
+        {project.tagline && (
+          <p className="text-base sm:text-xl md:text-2xl mb-3 text-center text-neutral-900 font-medium">
+            {project.tagline}
+          </p>
+        )}
+
         {project.description.split('\n').map((p, idx) => (
-          <p key={idx} className="mb-3 last:mb-0">{p}</p>
+          <p key={idx} className="mb-3 last:mb-0">
+            {p}
+          </p>
         ))}
       </div>
+
+      {project.icons && (
+        <div className="mt-6 flex flex-wrap justify-center gap-4 text-3xl sm:text-4xl text-cyan-800">
+          {project.icons.map((Icon, index) => (
+            <Icon key={index} title={project.name} />
+          ))}
+        </div>
+      )}
     </ModalWrapper>
   );
 };
-
 
 export default PersonalProjectsModal;

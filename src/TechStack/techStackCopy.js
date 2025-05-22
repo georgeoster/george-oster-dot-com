@@ -27,7 +27,7 @@ export const frontEnd = {
 };
 
 export const backEnd = {
-  title: "Backend Development Focused",
+  title: "Backend Development",
   tagline: "Designing and building scalable APIs with Node.js and Express.",
   description:
     "I build backend systems focused on simplicity, performance, and scalability. Using Node.js and Express, combined with JavaScript and TypeScript, I develop RESTful APIs that connect frontend applications to data and services efficiently and securely.",
