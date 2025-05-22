@@ -1,22 +1,36 @@
 import ModalWrapper from "../Shared/ModalWrapper";
 
-const PersonalProjectsModal = ({ isOpen, onClose, project, primaryButtonHandler, secondaryButtonHandler }) => {
+const PersonalProjectsModal = ({ isOpen, onClose, project }) => {
   if (!isOpen || !project) return null;
+
+  const { frontEnd, backEnd } = project.repos || {};
 
   const footer = (
     <>
-      <button
-        onClick={primaryButtonHandler}
-        className="px-5 py-2 text-sm sm:text-base font-medium rounded-2xl shadow-md bg-cyan-800 text-white hover:bg-cyan-700 transition"
-      >
-        View Site
-      </button>
-      <button
-        onClick={secondaryButtonHandler}
-        className="px-5 py-2 text-sm sm:text-base font-medium rounded-2xl border border-cyan-800 text-cyan-800 hover:bg-cyan-100 transition"
-      >
-        GitHub Repo
-      </button>
+      {project.live && (
+        <button
+          onClick={() => window.open(project.live, "_blank", "noopener,noreferrer")}
+          className="px-5 py-2 text-sm sm:text-base font-medium rounded-2xl shadow-md bg-cyan-800 text-white hover:bg-cyan-700 transition"
+        >
+          View Site
+        </button>
+      )}
+      {frontEnd && (
+        <button
+          onClick={() => window.open(frontEnd, "_blank", "noopener,noreferrer")}
+          className="px-5 py-2 text-sm sm:text-base font-medium rounded-2xl border border-cyan-800 text-cyan-800 hover:bg-cyan-100 transition"
+        >
+          Frontend Repo
+        </button>
+      )}
+      {backEnd && (
+        <button
+          onClick={() => window.open(backEnd, "_blank", "noopener,noreferrer")}
+          className="px-5 py-2 text-sm sm:text-base font-medium rounded-2xl border border-cyan-800 text-cyan-800 hover:bg-cyan-100 transition"
+        >
+          Backend Repo
+        </button>
+      )}
     </>
   );
 
@@ -30,5 +44,6 @@ const PersonalProjectsModal = ({ isOpen, onClose, project, primaryButtonHandler,
     </ModalWrapper>
   );
 };
+
 
 export default PersonalProjectsModal;
