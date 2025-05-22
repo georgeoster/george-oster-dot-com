@@ -16,13 +16,20 @@ The frontend is built with Angular and Tailwind, supported by a Node.js and Expr
 Each post includes a full photo carousel and a lightbox for immersive browsing. I designed the entire platform to feel simple, fast, and personal—balancing performance with a lightweight aesthetic that emphasizes the content.`,
     images: [osteroushHome, osteroushSignIn, osteroushMenu, osteroushViewPlaces, osteroushAddPlace, osteroushPlace],
     live: "https://osteroush.com",
-    repo: "https://github.com/georgeoster",
+    repos: {
+      frontEnd: "https://github.com/georgeoster/osteroushFrontEnd",
+      backEnd: "https://github.com/georgeoster/osteroushBackEnd"
+    }
+
   },
   {
     name: "Brunchinator",
     description: "Restaurant rating app focused on brunch spots, ranking burgers and Bloody Marys.",
     images: [brunchinatorImage],
     live: "https://brunchinator.com",
-    repo: "https://github.com/georgeoster",
+    repos: {
+      frontEnd: "https://github.com/georgeoster/brunchinatorAngular",
+      backEnd: "https://github.com/georgeoster/brunchinatorBackEnd"
+    }
   },
 ];
