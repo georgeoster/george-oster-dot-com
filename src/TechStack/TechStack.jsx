@@ -5,7 +5,7 @@ import TechStackItem from "./TechStackItem";
 import TechStackModal from "./TechStackModal";
 import { frontEnd, backEnd, dataBase, testing } from "./techStackCopy";
 
-const TechStack = () => {
+const TechStack = ({ projectsRef, setFlashPersonalProjects, contactMeRef, setFlashContact }) => {
   const [showModal, setShowModal] = useState(false);
   const [modalMode, setModalMode] = useState(null);
 
@@ -16,6 +16,24 @@ const TechStack = () => {
 
   const items = [frontEnd, backEnd, dataBase, testing];
 
+  const primaryButtonHandler = () => {
+    setShowModal(false);
+    setTimeout(() => {
+      setFlashPersonalProjects(true);
+      setTimeout(() => setFlashPersonalProjects(false), 2000);
+      projectsRef?.current?.scrollIntoView({ behavior: 'smooth' });
+    }, 300); // allow modal animation to complete
+  }
+
+  const secondaryButtonHandler = () => {
+    setShowModal(false);
+    setTimeout(() => {
+      contactMeRef?.current?.scrollIntoView({ behavior: 'smooth' });
+      setFlashContact(true);
+      setTimeout(() => setFlashContact(false), 2000);
+    }, 300); // allow modal animation to complete
+  }
+
   return (
     <section className="py-4 md:py-6 lg:py-8">
       <SectionContainer>
@@ -23,7 +41,10 @@ const TechStack = () => {
           isOpen={showModal}
           onClose={() => setShowModal(false)}
           mode={modalMode}
+          primaryButtonHandler={primaryButtonHandler}
+          secondaryButtonHandler={secondaryButtonHandler}
         />
+
 
         <h2 className="relative text-center text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-800 mb-8 after:content-[''] after:block after:h-1 after:w-16 after:mx-auto after:mt-2 after:bg-cyan-800 after:rounded-full">
           Tech Stack

@@ -1,2 +1,12 @@
+@keyframes flash-highlight {
+  0% {
+    background-color: rgba(56, 189, 248, 0.4);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
 
-
+.flash-heading {
+  animation: flash-highlight 2s ease-in-out;
+}

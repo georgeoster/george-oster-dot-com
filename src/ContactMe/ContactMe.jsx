@@ -1,17 +1,20 @@
+import { forwardRef } from 'react';
 import SectionContainer from '../Shared/SectionContainer';
 import ContactMeItem from './ContactMeItem';
 import { contacts } from './contactMeCopy';
 
 
-const ContactMe = () => {
+const ContactMe = forwardRef(({flash}, ref) => {
   return (
-    <section className="bg-neutral-900 py-4 md:py-6 lg:py-8 text-neutral-100">
+    <section ref={ref} className="bg-neutral-900 py-4 md:py-6 lg:py-8 text-neutral-100 transition-colors duration-1000">
       <SectionContainer>
-        <h2 className="
+
+        <h2 className={`
           relative text-center text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-100 mb-8
           after:content-[''] after:block after:h-1 after:w-16 after:mx-auto after:mt-2
           after:bg-sky-800 after:rounded-full
-        ">
+          ${flash ? 'flash-heading' : ''}
+        `}>
           Get in Touch
         </h2>
 
@@ -23,6 +26,6 @@ const ContactMe = () => {
       </SectionContainer>
     </section>
   );
-};
+});
 
 export default ContactMe;
