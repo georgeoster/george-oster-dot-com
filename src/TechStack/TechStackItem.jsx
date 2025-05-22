@@ -9,6 +9,7 @@ const TechStackItem = ({ mode, onClick }) => {
         shadow-md hover:shadow-lg hover:scale-[1.02] 
         hover:bg-neutral-100 transition-all duration-300 ease-in-out 
         text-left w-full
+        cursor-pointer
       "
     >
       <h3
