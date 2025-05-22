@@ -5,7 +5,7 @@ const PersonalProjectsItem = ({ project, onClick }) => {
     <section
       className="
         grid grid-cols-1
-        bg-neutral-800 border border-cyan-700
+        bg-neutral-800
         rounded-2xl w-full text-left overflow-hidden
         shadow-md hover:shadow-lg hover:scale-[1.01]
         transition-all duration-300 ease-in-out
@@ -34,5 +34,6 @@ const PersonalProjectsItem = ({ project, onClick }) => {
     </section>
   );
 };
+
 
 export default PersonalProjectsItem;
