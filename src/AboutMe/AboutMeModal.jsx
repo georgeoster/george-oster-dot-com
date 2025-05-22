@@ -5,7 +5,7 @@ const AboutMeModal = ({ isOpen, onClose, item }) => {
 
   return (
     <ModalWrapper isOpen={isOpen} onClose={onClose} title={item.title} centered>
-      <div className="mt-6 flex flex-col gap-8">
+      <div className="mt-6 mb-6 flex flex-col gap-8">
         {item.photos?.map((photo, index) => (
           <div
             key={index}

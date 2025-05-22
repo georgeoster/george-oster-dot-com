@@ -6,30 +6,38 @@ import osteroushSignIn from '../assets/osteroushSignIn.png'
 import osteroushViewPlaces from '../assets/osteroushViewPlaces.png'
 import brunchinatorImage from '../assets/brunchinator.png';
 
+import { FaAngular, FaAws } from "react-icons/fa";
+import { SiTailwindcss, SiNodedotjs } from "react-icons/si";
+
 export const projects = [
   {
     name: "Osteroush",
-    description: `Since our wedding on October 7th, 2017, my wife and I have celebrated the 7th of every month by visiting a restaurant neither of us has been to before. Osteroush.com captures our journey with custom posts, photos, and write-ups—whether the meal was amazing or awful.
+    description: `Every month, my wife and I visit a restaurant neither of us has been to before. Sometimes it's a hidden gem, sometimes it's a total bust — but it's always an adventure. 
+    
+    Osteroush.com captures our journey with write-ups, a photo carousel, and a lightbox for immersive browsing.
 
-The frontend is built with Angular and Tailwind, supported by a Node.js and Express backend. I used DynamoDB to store posts and Amazon S3 for image hosting. 
-
-Each post includes a full photo carousel and a lightbox for immersive browsing. I designed the entire platform to feel simple, fast, and personal—balancing performance with a lightweight aesthetic that emphasizes the content.`,
+    The frontend is built with Angular and Tailwind, supported by a Node.js and Express backend. I used DynamoDB to store posts and Amazon S3 for image hosting.`,
     images: [osteroushHome, osteroushSignIn, osteroushMenu, osteroushViewPlaces, osteroushAddPlace, osteroushPlace],
     live: "https://osteroush.com",
     repos: {
       frontEnd: "https://github.com/georgeoster/osteroushFrontEnd",
       backEnd: "https://github.com/georgeoster/osteroushBackEnd"
-    }
-
+    },
+    tagline: "A personalized monthly dining journal.",
+    icons: [FaAngular, SiTailwindcss, FaAws, SiNodedotjs]
   },
   {
     name: "Brunchinator",
-    description: "Restaurant rating app focused on brunch spots, ranking burgers and Bloody Marys.",
+    description: `It began as a personal tool to track which brunch spots served the best Bloody Mary. Over time, it evolved into a full-featured app for rating brunch destinations based on burgers, bloodys, and atmosphere.
+
+    The current version features an Angular and Tailwind frontend with a Node.js and Express backend. It integrates with multiple Google APIs to retrieve place data, addresses, and photos.`,
     images: [brunchinatorImage],
     live: "https://brunchinator.com",
     repos: {
       frontEnd: "https://github.com/georgeoster/brunchinatorAngular",
       backEnd: "https://github.com/georgeoster/brunchinatorBackEnd"
-    }
+    },
+    tagline: "Burgers and Bloody Marys.",
+    icons: [FaAngular, SiTailwindcss, FaAws, SiNodedotjs]
   },
 ];
