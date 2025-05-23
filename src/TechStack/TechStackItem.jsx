@@ -4,10 +4,10 @@ const TechStackItem = ({ mode, onClick }) => {
       type="button"
       onClick={() => onClick(mode)}
       className="
-        bg-neutral-50 border border-neutral-200 
+        bg-white/80 border-neutral-300 hover:bg-white
         rounded-2xl p-6 mb-4 lg:mb-0
         shadow-md hover:shadow-lg hover:scale-[1.02] 
-        hover:bg-neutral-100 transition-all duration-300 ease-in-out 
+         transition-all duration-300 ease-in-out 
         text-left w-full
         cursor-pointer
       "

@@ -10,7 +10,7 @@ const PersonalProjectsModal = ({ isOpen, onClose, project }) => {
       {project.live && (
         <button
           onClick={() => window.open(project.live, "_blank", "noopener,noreferrer")}
-          className="px-5 py-2 text-sm sm:text-base font-medium rounded-2xl shadow-md bg-cyan-800 text-white hover:bg-cyan-700 transition"
+          className="px-5 py-2 text-sm sm:text-base font-medium rounded-2xl shadow-md bg-sky-900 text-white hover:bg-cyan-700 transition"
         >
           View Site
         </button>
@@ -18,7 +18,7 @@ const PersonalProjectsModal = ({ isOpen, onClose, project }) => {
       {frontEnd && (
         <button
           onClick={() => window.open(frontEnd, "_blank", "noopener,noreferrer")}
-          className="px-5 py-2 text-sm sm:text-base font-medium rounded-2xl border border-cyan-800 text-cyan-800 hover:bg-cyan-100 transition"
+          className="px-5 py-2 text-sm sm:text-base font-medium rounded-2xl border border-sky-900 text-cyan-800 hover:bg-cyan-100 transition"
         >
           Frontend Repo
         </button>
@@ -26,7 +26,7 @@ const PersonalProjectsModal = ({ isOpen, onClose, project }) => {
       {backEnd && (
         <button
           onClick={() => window.open(backEnd, "_blank", "noopener,noreferrer")}
-          className="px-5 py-2 text-sm sm:text-base font-medium rounded-2xl border border-cyan-800 text-cyan-800 hover:bg-cyan-100 transition"
+          className="px-5 py-2 text-sm sm:text-base font-medium rounded-2xl border border-sky-900 text-cyan-800 hover:bg-cyan-100 transition"
         >
           Backend Repo
         </button>
