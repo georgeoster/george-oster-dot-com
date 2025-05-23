@@ -6,12 +6,13 @@ const PersonalProjectsItem = ({ project, onClick }) => {
       className="
         grid grid-cols-1
         bg-neutral-800
+        border-neutral-600 border
         rounded-2xl w-full text-left overflow-hidden
         shadow-md hover:shadow-lg hover:scale-[1.01]
         transition-all duration-300 ease-in-out
       "
     >
-      <h3 className="text-xl md:text-2xl font-bold text-cyan-400 mt-4 mx-auto pb-4">
+      <h3 className="text-2xl font-bold text-neutral-300 mt-4 mx-auto pb-4">
         {project.name}
       </h3>
       
@@ -24,13 +25,16 @@ const PersonalProjectsItem = ({ project, onClick }) => {
         onClick={() => onClick(project)}
         aria-label={`Learn more about ${project.name}`}
         className="
-          text-cyan-400 text-sm md:text-base
+          text-sky-300 hover:text-sky-200
+          text-xl 
           px-6 pb-6 pt-4 mx-auto
           hover:underline focus:underline focus:outline-none
+          cursor-pointer
         "
       >
         Click to learn more
       </button>
+
     </section>
   );
 };

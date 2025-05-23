@@ -75,7 +75,7 @@ const Carousel = ({ images, altText }) => {
           {images.map((_, index) => (
             <div
               key={index}
-              className={`w-2 h-2 rounded-full ${index === current ? 'bg-cyan-400' : 'bg-white/30'}`}
+              className={`w-2 h-2 rounded-full ${index === current ? 'bg-sky-700' : 'bg-white/30'}`}
             ></div>
           ))}
         </div>

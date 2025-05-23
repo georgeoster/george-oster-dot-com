@@ -40,7 +40,7 @@ const ModalWrapper = ({ isOpen, onClose, title, children, centered = false, foot
         {/* Header */}
         <div className="relative px-6 sm:px-8 pt-6 sm:pt-8 pb-4 text-center">
           {title && (
-            <h2 className="text-3xl sm:text-4xl font-bold text-cyan-700">
+            <h2 className="text-3xl sm:text-4xl font-bold text-sky-800">
               {title}
             </h2>
           )}
