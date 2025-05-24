@@ -32,7 +32,9 @@ const ModalWrapper = ({ isOpen, onClose, title, children, centered = false, foot
       <div
         ref={modalRef}
         className="
-          relative bg-white text-neutral-800 w-full max-w-sm sm:max-w-3xl
+          relative 
+          bg-gradient-to-br from-neutral-300 via-neutral-50 to-neutral-300
+          text-neutral-800 w-full max-w-sm sm:max-w-3xl
           rounded-2xl shadow-xl transition-all duration-500 ease-out
           opacity-0 translate-y-5 flex flex-col max-h-[90vh]
         "
@@ -48,8 +50,13 @@ const ModalWrapper = ({ isOpen, onClose, title, children, centered = false, foot
             type="button"
             aria-label="Close modal"
             onClick={handleClose}
-            className="absolute top-6 right-6 text-neutral-500 hover:text-neutral-800 hover:bg-neutral-200 rounded-full p-2 transition-colors"
-          >
+            className="
+              absolute top-1 right-1 
+              text-neutral-500 
+              hover:bg-cyan-800 hover:text-white
+              cursor-pointer
+              rounded-full p-2 transition-colors
+          ">
             <X size={20} />
           </button>
 
