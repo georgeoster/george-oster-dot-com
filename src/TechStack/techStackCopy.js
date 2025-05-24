@@ -18,7 +18,7 @@ import { FaReact, FaAngular, FaVuejs } from "react-icons/fa";
 export const frontEnd = {
   title: "Frontend Focused",
   tagline:
-    "Building clean, responsive, and accessible interfaces with modern JavaScript frameworks like React, Angular, and Vue.",
+    "React, Angular, and Vue.",
   description:
     "With 8 years of experience in front-end development, I specialize in crafting intuitive, scalable, and performant web interfaces. My expertise spans component-based architectures, state management, and design system integration across various frameworks.",
   expansion:
@@ -28,9 +28,9 @@ export const frontEnd = {
 
 export const backEnd = {
   title: "Backend Development",
-  tagline: "Designing and building scalable APIs with Node.js and Express.",
+  tagline: "Scalable APIs with Node.js and Express.",
   description:
-    "I build backend systems focused on simplicity, performance, and scalability. Using Node.js and Express, combined with JavaScript and TypeScript, I develop RESTful APIs that connect frontend applications to data and services efficiently and securely.",
+    "I build backend systems focused on simplicity, performance, and scalability. Using Node.js and Express, I develop RESTful APIs that connect frontend applications to data and services efficiently and securely.",
   icons: [SiNodedotjs, SiExpress, SiJavascript, SiTypescript],
 };
 
@@ -45,7 +45,7 @@ export const dataBase = {
 export const testing = {
   title: "Testing & Tooling",
   tagline:
-    "Delivering reliable software through automated testing and thoughtful developer tools.",
+    "Automated testing and thoughtful developer tools.",
   description:
     "I specialize in writing thorough and effective tests to ensure software reliability. For unit testing, I use Jest, Mocha, and Chai to validate functionality at the smallest level. For end-to-end automation, I leverage Playwright and Selenium to simulate real user interactions and validate entire application flows.",
   expansion:
