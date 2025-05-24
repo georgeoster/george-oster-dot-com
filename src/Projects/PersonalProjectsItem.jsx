@@ -5,10 +5,13 @@ const PersonalProjectsItem = ({ project, onClick }) => {
     <section
       className="
         grid grid-cols-1
-        bg-neutral-800
-        border-neutral-600 border
+        bg-neutral-800/40 backdrop-blur-sm
+        border border-zinc-900
         rounded-2xl w-full text-left overflow-hidden
-        shadow-md hover:shadow-lg hover:scale-[1.01]
+        ring-1 ring-white/10
+        drop-shadow-[0_10px_25px_rgba(0,0,0,0.75)]
+        hover:drop-shadow-[0_15px_30px_rgba(0,0,0,0.85)]
+        hover:scale-[1.01]
         transition-all duration-300 ease-in-out
       "
     >
@@ -25,14 +28,14 @@ const PersonalProjectsItem = ({ project, onClick }) => {
         onClick={() => onClick(project)}
         aria-label={`Learn more about ${project.name}`}
         className="
-          text-sky-300 hover:text-sky-200
+          text-shadow-blue-700 hover:text-sky-200
           text-xl 
-          px-6 pb-6 pt-4 mx-auto
-          hover:underline focus:underline focus:outline-none
+          p-6 mx-auto
+          focus:outline-none
           cursor-pointer
         "
       >
-        Click to learn more
+        View Project Details
       </button>
 
     </section>

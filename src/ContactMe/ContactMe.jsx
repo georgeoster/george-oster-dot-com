@@ -6,7 +6,10 @@ import { contacts } from './contactMeCopy';
 
 const ContactMe = forwardRef(({flash}, ref) => {
   return (
-    <section ref={ref} className="bg-neutral-900 py-4 md:py-6 lg:py-8 text-neutral-100 transition-colors duration-1000">
+    <section ref={ref} className="
+      bg-gradient-to-tr from-zinc-900 via-sky-900 to-zinc-900 
+      pt-4 pb-8 md:pt-6 lg:pt-8 text-neutral-100 transition-colors duration-1000
+    ">
       <SectionContainer>
 
         <h2 className={`

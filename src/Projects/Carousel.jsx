@@ -52,7 +52,7 @@ const Carousel = ({ images, altText }) => {
           {current > 0 && (
             <button
               onClick={goToPrev}
-              className="absolute top-1/2 left-2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full z-20"
+              className="absolute top-1/2 left-2 -translate-y-1/2 bg-white/20 hover:bg-black/50 text-white p-2 rounded-full z-20"
               aria-label="Previous image"
             >
               <ChevronLeft size={20} />
@@ -61,7 +61,7 @@ const Carousel = ({ images, altText }) => {
           {current < images.length - 1 && (
             <button
               onClick={goToNext}
-              className="absolute top-1/2 right-2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full z-20"
+              className="absolute top-1/2 right-2 -translate-y-1/2 bg-white/20 hover:bg-black/50 text-white p-2 rounded-full z-20"
               aria-label="Next image"
             >
               <ChevronRight size={20} />
@@ -75,7 +75,7 @@ const Carousel = ({ images, altText }) => {
           {images.map((_, index) => (
             <div
               key={index}
-              className={`w-2 h-2 rounded-full ${index === current ? 'bg-sky-700' : 'bg-white/30'}`}
+              className={`w-2 h-2 rounded-full ${index === current ? 'bg-sky-900' : 'bg-white/30'}`}
             ></div>
           ))}
         </div>

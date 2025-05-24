@@ -17,8 +17,11 @@ const PersonalProjects = forwardRef(({ flash }, ref) => {
     <section
       ref={ref}
       id="personal-projects"
-      className="bg-neutral-900 py-4 md:py-6 lg:py-8 text-neutral-100"
-    >
+      className="
+        bg-gradient-to-tr from-zinc-900 via-sky-900 to-zinc-900 
+        py-4 md:py-6 lg:py-8 text-neutral-100
+      "
+      >
       <SectionContainer>
         <PersonalProjectsModal
           isOpen={showModal}
