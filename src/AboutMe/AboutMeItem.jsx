@@ -3,10 +3,13 @@ const AboutMeItem = ({ image, title, tagline, onClick }) => {
     <article
       onClick={onClick}
       className="
-        group grid grid-cols-2 gap-2 p-2 
-        bg-neutral-50 rounded-3xl border border-neutral-200 
-        hover:shadow-md hover:scale-[1.01] 
-        transition-all duration-300 ease-in-out cursor-pointer
+        group grid grid-cols-2 gap-2 p-4 
+      bg-white/80 border-neutral-300 hover:bg-white
+        rounded-2xl mb-4 lg:mb-0
+        shadow-md hover:shadow-lg hover:scale-[1.02] 
+        transition-all duration-300 ease-in-out 
+        text-left w-full
+        cursor-pointer
       "
     >
       <img

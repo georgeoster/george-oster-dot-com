@@ -16,7 +16,10 @@ const AboutMe = () => {
   const items = [charcoal, brindle, meatTower, jojoSmile];
 
   return (
-    <section className="bg-white py-4 md:py-6 lg:py-8 text-neutral-800">
+    <section className="
+      bg-gradient-to-br from-neutral-300 via-neutral-50 to-neutral-300
+      py-4 md:py-6 lg:py-8 text-neutral-800
+    ">
       <SectionContainer>
         <AboutMeModal
           isOpen={showModal}

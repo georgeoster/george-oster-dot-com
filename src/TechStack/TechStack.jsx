@@ -35,7 +35,10 @@ const TechStack = ({ projectsRef, setFlashPersonalProjects, contactMeRef, setFla
   }
 
   return (
-    <section className="py-4 md:py-6 lg:py-8">
+    <section className="
+      py-4 md:py-6 lg:py-8 
+      bg-gradient-to-br from-neutral-300 via-neutral-50 to-neutral-300
+    ">
       <SectionContainer>
         <TechStackModal
           isOpen={showModal}
