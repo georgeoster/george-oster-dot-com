@@ -36,8 +36,8 @@ const TechStackModal = ({ isOpen, onClose, mode, primaryButtonHandler, secondary
 
   return (
     <ModalWrapper isOpen={isOpen} onClose={onClose} title={mode.title} centered footer={footer}>
-      <div className="mt-4 text-sm sm:text-base sm:mt-6 text-left text-neutral-700">
-        <p className="text-base sm:text-xl md:text-2xl mb-3">{mode.tagline}</p>
+      <div className="mt-1 text-sm sm:text-base text-left text-neutral-700">
+        <p className="text-2xl mb-3">{mode.tagline}</p>
         <p className="mb-3">{mode.description}</p>
         {mode.expansion && <p className="mb-3">{mode.expansion}</p>}
       </div>
