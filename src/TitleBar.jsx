@@ -2,9 +2,8 @@ const TitleBar = () => {
   return (
     <header
       className="
-        bg-neutral-800 
+        bg-gradient-to-tr from-zinc-900 via-sky-950 to-zinc-900 
         h-20 
-        border-b-2 border-b-neutral-400 
         flex items-center justify-between
       "
     >
