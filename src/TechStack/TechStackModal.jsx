@@ -7,14 +7,28 @@ const TechStackModal = ({ isOpen, onClose, mode, primaryButtonHandler, secondary
     <>
       <button
         onClick={primaryButtonHandler}
-        className="px-5 py-2 text-sm sm:text-base font-medium rounded-2xl shadow-md bg-cyan-800 text-white hover:bg-cyan-700 transition"
-      >
+        className="
+          px-5 py-2 
+          text-sm sm:text-base font-medium 
+          rounded-2xl 
+          shadow-md 
+          bg-cyan-800 text-white hover:bg-cyan-700 
+          transition
+          cursor-pointer
+      ">
         View Projects
       </button>
       <button
         onClick={secondaryButtonHandler}
-        className="px-5 py-2 text-sm sm:text-base font-medium rounded-2xl border border-cyan-800 text-cyan-800 hover:bg-cyan-100 transition"
-      >
+        className="
+          px-5 py-2 
+          text-sm sm:text-base font-medium 
+          rounded-2xl border border-cyan-800 
+          text-cyan-800 
+          hover:bg-cyan-100 
+          transition
+          cursor-pointer
+      ">
         Get in Touch
       </button>
     </>
