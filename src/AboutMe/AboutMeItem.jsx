@@ -4,7 +4,7 @@ const AboutMeItem = ({ image, title, tagline, onClick }) => {
       onClick={onClick}
       className="
         group grid grid-cols-2 gap-2 p-4 
-      bg-white/80 border-neutral-300 hover:bg-white
+       bg-white/80 border-neutral-300 hover:bg-white
         rounded-2xl mb-4 lg:mb-0
         shadow-md hover:shadow-lg hover:scale-[1.02] 
         transition-all duration-300 ease-in-out 
