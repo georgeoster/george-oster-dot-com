@@ -73,3 +73,4 @@ Crafted with care and coffee.
 
 ## 📬 Contact
 If you’re hiring, collaborating, or just saying hi: [email me](mailto:georgeostercodes@gmail.com), connect on [LinkedIn](https://www.linkedin.com/in/georgeostercodes), or check out my [GitHub](https://github.com/georgeoster).
+
