@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import './App.css';
+import GoogleAnalytics from './GoogleAnalytics/GoogleAnalytics';
 import TitleBar from './TitleBar';
 import IntroCard from './IntroCard';
 import TechStack from './TechStack/TechStack';
@@ -16,6 +17,7 @@ function App() {
 
   return (
     <>
+      <GoogleAnalytics/>
       <TitleBar />
       <IntroCard />
       <TechStack
