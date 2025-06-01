@@ -3,7 +3,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Carousel = ({ images, altText }) => {
   const [current, setCurrent] = useState(0);
-  const trackRef = useRef(null);
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
 
   const goToPrev = () => {
     setCurrent((prev) => Math.max(prev - 1, 0));
@@ -13,11 +14,42 @@ const Carousel = ({ images, altText }) => {
     setCurrent((prev) => Math.min(prev + 1, images.length - 1));
   };
 
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+
+    const deltaX = touchStartX.current - touchEndX.current;
+
+    // Set a minimum swipe distance to avoid accidental swipes
+    const minSwipeDistance = 50;
+
+    if (deltaX > minSwipeDistance && current < images.length - 1) {
+      goToNext();
+    } else if (deltaX < -minSwipeDistance && current > 0) {
+      goToPrev();
+    }
+
+    // Reset refs
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   return (
-    <div className="relative w-full h-64 overflow-hidden">
+    <div
+      className="relative w-full h-64 overflow-hidden"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="w-full h-full overflow-visible">
         <div
-          ref={trackRef}
           className="flex h-full transition-transform duration-500 ease-in-out"
           style={{
             transform: `translateX(-${current * (100 / images.length)}%)`,
